@@ -1,0 +1,15 @@
+body, ul, li, h1, h2, a{
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  padding: 3px;
+  background-color: #135249;
+  color: white;
+}
