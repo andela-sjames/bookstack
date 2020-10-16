@@ -1,15 +1,33 @@
+/* colours */
+:root{
+  --primary: #92bfec;
+}
+
 body, ul, li, h1, h2, a{
   margin: 0;
   padding: 0;
 }
 
 .App {
-  text-align: center;
+  position: relative;
+  min-height: 100vh;
+}
+
+.navbar {
+  background: var(--primary);
+  padding: 10px 20px;
 }
 
 footer {
   text-align: center;
   padding: 3px;
-  background-color: #135249;
-  color: white;
+  background-color: var(--primary);
+  color: black;
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.add-form {
+  margin: 0px 50px;
 }
