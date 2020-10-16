@@ -1,18 +1,31 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Button, Icon, Form } from 'semantic-ui-react'
 
 
 const AddBook = () => {
+    const [title, setTitle] = useState('')
+    const [author, setAuthor] = useState('')
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        // dispatch({ type: 'ADD_BOOK', book: { title, author }});
+        console.log(title, author)
+        setTitle('');
+        setAuthor('');
+    }
+
     return ( 
         <div className="add-form">
-            <Form>
+            <Form onSubmit={handleSubmit}>
                 <Form.Field>
                     <label>Title</label>
-                    <input placeholder='Book Title' />
+                    <input placeholder='Book Title' value={title}
+                      onChange={(e) => setTitle(e.target.value)} required />
                 </Form.Field>
                 <Form.Field>
                     <label>Author</label>
-                    <input placeholder='Book Author' />
+                    <input placeholder='Book Author' value={author}
+                      onChange={(e) => setAuthor(e.target.value)} required/>
                 </Form.Field>
                 <Button icon labelPosition='right' type='submit' basic color='blue'>
                     Add book
