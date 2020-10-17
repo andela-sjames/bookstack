@@ -4,14 +4,17 @@ import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 import BookList from './components/BookList';
 import AddBook from './components/AddBook';
+import BookStackContextProvider from './contexts/BookStackContext';
 
 function App() {
   return (
     <div className="App">
-      <Navbar />
-      <BookList />
-      <AddBook />
-      <Footer />
+      <BookStackContextProvider>
+        <Navbar />
+        <BookList />
+        <AddBook />
+        <Footer />
+      </BookStackContextProvider>
     </div>
   );
 }

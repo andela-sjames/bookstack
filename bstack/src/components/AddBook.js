@@ -1,14 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { Button, Icon, Form } from 'semantic-ui-react'
+import { BookStackContext } from '../contexts/BookStackContext';
 
 
 const AddBook = () => {
     const [title, setTitle] = useState('')
     const [author, setAuthor] = useState('')
 
+    const { dispatch } = useContext(BookStackContext)
+
     const handleSubmit = (e) => {
         e.preventDefault();
-        // dispatch({ type: 'ADD_BOOK', book: { title, author }});
+        dispatch({ type: 'ADD_BOOK', book: { title, author }});
         console.log(title, author)
         setTitle('');
         setAuthor('');
