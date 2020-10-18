@@ -3,16 +3,33 @@ import uuid from 'uuid/v4';
 export const BookStackReducer = (state, action) => {
   switch (action.type) {
     case 'ADD_BOOK':
-      return [...state, {
+    const stack = { 
+        id: uuid(),
         title: action.book.title, 
         author: action.book.author, 
-        id: uuid()}
-      ]
+    }
+
+    return Object.assign({}, state, {
+            stackList: [...state.stackList, stack.id],
+            objStack: {
+                ...state.objStack, [stack.id]: stack
+            },
+        }
+    )
+
     case 'REMOVE_BOOK':
-      return state.filter(book => book.id !== action.id);
+        const newObjStack = {...state.objStack}
+        delete newObjStack[action.id]
+        return Object.assign({}, state, {
+                stackList: state.stackList.filter(id => id !== action.id),
+                objStack: {
+                    ...newObjStack
+                },
+            }
+        )
     
     case 'EDIT_BOOK':
-        return 
+        return state
     
     default:
       return state;

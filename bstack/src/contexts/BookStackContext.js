@@ -4,9 +4,9 @@ import { BookStackReducer } from '../reducers/BookStackReducer';
 export const BookStackContext = createContext();
 
 const BookStackContextProvider = (props) => {
-  const [books, dispatch] = useReducer(BookStackReducer, [], () => {
+  const [books, dispatch] = useReducer(BookStackReducer, {'stackList' : [], 'objStack': {}}, () => {
     const localData = localStorage.getItem('bookstack');
-    return localData ? JSON.parse(localData) : [];
+    return localData ? JSON.parse(localData) : {'stackList' : [], 'objStack': {}};
   });
   useEffect(() => {
     localStorage.setItem('bookstack', JSON.stringify(books));

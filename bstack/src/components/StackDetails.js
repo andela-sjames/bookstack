@@ -6,6 +6,7 @@ import { Button, Icon } from 'semantic-ui-react';
 
 
 const StackDetails = ({ book }) => {
+    console.log(book)
 
     // dispatch action on delete and edit
     const { dispatch } = useContext(BookStackContext)
@@ -13,6 +14,11 @@ const StackDetails = ({ book }) => {
     const deleteStack = (e) => {
         e.preventDefault();
         dispatch({ type: 'REMOVE_BOOK', id: book.id });
+    }
+
+    const editStack = (e) => {
+        e.preventDefault();
+        // do something interesting here!!
 
     }
 

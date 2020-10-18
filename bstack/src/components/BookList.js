@@ -6,10 +6,13 @@ import StackDetails from './StackDetails';
 
 const BookList = () => {
     const { books } = useContext(BookStackContext);
-    return books.length ? (
+    console.log(books); 
+    console.log(books.objStack, "objstack")
+    
+    return books['stackList'].length ? (
         <div className="grid-container">
-            {books.map(book => {
-                return ( <StackDetails book={book} key={book.id} /> );
+            {books['stackList'].map(book => {
+                return ( <StackDetails book={books.objStack[book]} key={book} /> );
             })}
         </div>
     ): (
