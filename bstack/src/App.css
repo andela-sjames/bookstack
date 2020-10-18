@@ -65,11 +65,11 @@ body, ul, li, h1, h2, a{
   background-color: rgba(238, 238, 238, 1);
 }
 
-/* responsive styles */
-  
-@media screen and (max-width: 1400px){
-
+.btn-down {
+  bottom: 0; /* dummy check */
 }
+
+/* responsive styles */
 
 @media screen and (max-width: 960px){
   .grid-container {

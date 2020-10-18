@@ -24,7 +24,7 @@ const StackDetails = ({ book }) => {
             <div>
                 <p>{book.author}</p>
             </div>
-            <div>
+            <div className="btn-down">
                 <Button icon basic color='red'  floated='left' onClick={deleteStack}>
                     <Icon name='trash alternate outline' />      
                 </Button>
