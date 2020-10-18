@@ -29,11 +29,6 @@ body, ul, li, h1, h2, a{
   height: 2.5rem;           /*  Footer height */
 }
 
-.add-form {
-  margin: 0px 50px;
-  padding-bottom: 2.5rem;   /* Footer height */
-}
-
 .grid-container {
   display: grid;
   grid-gap: 25px;
@@ -69,8 +64,33 @@ body, ul, li, h1, h2, a{
   bottom: 0; /* dummy check */
 }
 
-/* responsive styles */
+.add-form.overlay {
+  display: none;
+  /* display: block; */
+}
 
+.add-form {
+  display: block;
+  /* display: none; */
+  margin: 0px 50px;
+  padding-bottom: 2.5rem;   /* Footer height */
+}
+
+
+body.container #overlay {
+  position: fixed;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #FFFFFF;
+  z-index: 2;
+}
+
+/* responsive styles */
 @media screen and (max-width: 960px){
   .grid-container {
     display: grid;

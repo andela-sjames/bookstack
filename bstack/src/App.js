@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 import BookList from './components/BookList';
 import AddBook from './components/AddBook';
 import BookStackContextProvider from './contexts/BookStackContext';
+import EditBook from './components/EditBook';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Navbar />
         <BookList />
         <AddBook />
+        <EditBook />
         <Footer />
       </BookStackContextProvider>
     </div>
