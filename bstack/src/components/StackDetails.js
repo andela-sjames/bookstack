@@ -1,13 +1,9 @@
 import React, {useContext} from 'react';
 import { BookStackContext } from '../contexts/BookStackContext';
-// import { Card, Button, Icon } from 'semantic-ui-react'
-// import { Header, Divider } from 'semantic-ui-react'
 import { Button, Icon } from 'semantic-ui-react';
 
 
 const StackDetails = ({ book }) => {
-    console.log(book)
-
     // dispatch action on delete and edit
     const { dispatch } = useContext(BookStackContext)
 

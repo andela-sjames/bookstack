@@ -6,8 +6,6 @@ import StackDetails from './StackDetails';
 
 const BookList = () => {
     const { books } = useContext(BookStackContext);
-    console.log(books); 
-    console.log(books.objStack, "objstack")
     
     return books['stackList'].length ? (
         <div className="grid-container">
