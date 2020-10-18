@@ -7,12 +7,10 @@ import StackDetails from './StackDetails';
 const BookList = () => {
     const { books } = useContext(BookStackContext);
     return books.length ? (
-        <div className="book-list-grid">
-            <ul>
-                {books.map(book => {
-                    return ( <StackDetails book={book} key={book.id} /> );
-                })}
-            </ul>
+        <div className="grid-container">
+            {books.map(book => {
+                return ( <StackDetails book={book} key={book.id} /> );
+            })}
         </div>
     ): (
     <Segment placeholder>
