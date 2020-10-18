@@ -9,6 +9,13 @@ const StackDetails = ({ book }) => {
 
     // dispatch action on delete and edit
     const { dispatch } = useContext(BookStackContext)
+
+    const deleteStack = (e) => {
+        e.preventDefault();
+        dispatch({ type: 'REMOVE_BOOK', id: book.id });
+
+    }
+
     return (
         <div className="card">
             <div>
@@ -18,7 +25,7 @@ const StackDetails = ({ book }) => {
                 <p>{book.author}</p>
             </div>
             <div>
-                <Button icon basic color='red'  floated='left'>
+                <Button icon basic color='red'  floated='left' onClick={deleteStack}>
                     <Icon name='trash alternate outline' />      
                 </Button>
                 <Button icon basic color='green' floated='right'>
