@@ -9,10 +9,16 @@ const EditBook = () => {
     const [title, setTitle] = useState('')
     const [author, setAuthor] = useState('')
 
-    const { dispatch } = useContext(BookStackContext)
+    const { dispatch, books } = useContext(BookStackContext)
     const { isEdit, show, hide, id } = useContext(EditFormContext)
 
     const display = isEdit ? show : hide;
+
+    var book = '';
+    if (id) {
+        book  = books.objStack[id]
+    }
+
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -26,12 +32,12 @@ const EditBook = () => {
             <Form onSubmit={handleSubmit}>
                 <Form.Field>
                     <label>Title</label>
-                    <input placeholder='Book Title' value={title}
+                    <input placeholder={book.title} value={title}
                       onChange={(e) => setTitle(e.target.value)} required />
                 </Form.Field>
                 <Form.Field>
                     <label>Author</label>
-                    <input placeholder='Book Author' value={author}
+                    <input placeholder={book.author} value={author}
                       onChange={(e) => setAuthor(e.target.value)} required/>
                 </Form.Field>
                 <Button icon labelPosition='right' type='submit' basic color='orange'>
