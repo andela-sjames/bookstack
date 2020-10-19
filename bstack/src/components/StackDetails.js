@@ -1,11 +1,13 @@
-import React, {useContext} from 'react';
+import React, { useContext } from 'react';
 import { BookStackContext } from '../contexts/BookStackContext';
 import { Button, Icon } from 'semantic-ui-react';
+import { EditFormContext } from '../contexts/EditFormContext';
 
 
 const StackDetails = ({ book }) => {
     // dispatch action on delete and edit
     const { dispatch } = useContext(BookStackContext)
+    const { displayEdit } = useContext(EditFormContext)
 
     const deleteStack = (e) => {
         e.preventDefault();
@@ -15,13 +17,17 @@ const StackDetails = ({ book }) => {
     const editStack = (e) => {
         e.preventDefault();
         // do something interesting here!!
+        console.log("Edit Clicked!!!")
+        console.log(book)
+        // display the editForm and hide the addForm
+
 
     }
 
     return (
         <div className="card">
             <div>
-                <p>{book.title}</p>
+                <h5>{book.title}</h5>
             </div>
             <div>
                 <p>{book.author}</p>
@@ -30,7 +36,7 @@ const StackDetails = ({ book }) => {
                 <Button icon basic color='red'  floated='left' onClick={deleteStack}>
                     <Icon name='trash alternate outline' />      
                 </Button>
-                <Button icon basic color='green' floated='right'>
+                <Button icon basic color='green' floated='right' onClick={displayEdit}>
                     <Icon name='pencil alternate' />    
                 </Button>
             </div>

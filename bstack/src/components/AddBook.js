@@ -1,6 +1,7 @@
 import React, { useState, useContext } from 'react';
 import { Button, Icon, Form } from 'semantic-ui-react'
 import { BookStackContext } from '../contexts/BookStackContext';
+import { EditFormContext } from '../contexts/EditFormContext';
 
 
 const AddBook = () => {
@@ -8,6 +9,9 @@ const AddBook = () => {
     const [author, setAuthor] = useState('')
 
     const { dispatch } = useContext(BookStackContext)
+    const { isEdit, show, hide } = useContext(EditFormContext)
+
+    const display = isEdit ? hide : show;
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -18,7 +22,7 @@ const AddBook = () => {
     }
 
     return ( 
-        <div className="add-form">
+        <div className="add-form add" style={{ display: display }}>
             <Form onSubmit={handleSubmit}>
                 <Form.Field>
                     <label>Title</label>

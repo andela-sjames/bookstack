@@ -62,17 +62,11 @@ body, ul, li, h1, h2, a{
 
 .btn-down {
   bottom: 0; /* dummy check */
-  height: 50px;
+  /* height: 50px; */
 }
 
-.add-form.overlay {
-  display: none;
-  /* display: block; */
-}
 
 .add-form {
-  display: block;
-  /* display: none; */
   margin: 0px 50px;
   padding-bottom: 2.5rem;   /* Footer height */
 }
