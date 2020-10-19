@@ -5,7 +5,7 @@ import { EditFormContext } from '../contexts/EditFormContext';
 
 
 const StackDetails = ({ book }) => {
-    // dispatch action on delete and edit
+    // dispatch action on delete
     const { dispatch } = useContext(BookStackContext)
     const { displayEdit } = useContext(EditFormContext)
 
@@ -26,12 +26,11 @@ const StackDetails = ({ book }) => {
                 <Button icon basic color='red'  floated='left' onClick={deleteStack}>
                     <Icon name='trash alternate outline' />      
                 </Button>
-                <Button icon basic color='green' floated='right' onClick={displayEdit}>
+                <Button icon basic color='green' floated='right' onClick={() => displayEdit(book.id)}>
                     <Icon name='pencil alternate' />    
                 </Button>
             </div>
         </div>
-
     );
 }
 

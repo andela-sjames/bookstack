@@ -10,14 +10,13 @@ const EditBook = () => {
     const [author, setAuthor] = useState('')
 
     const { dispatch } = useContext(BookStackContext)
-    const { isEdit, show, hide } = useContext(EditFormContext)
+    const { isEdit, show, hide, id } = useContext(EditFormContext)
 
     const display = isEdit ? show : hide;
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        dispatch({ type: 'EDIT_BOOK', book: { title, author }});
-        console.log(title, author)
+        dispatch({ type: 'EDIT_BOOK', book: { title, author, id }});
         setTitle('');
         setAuthor('');
     }

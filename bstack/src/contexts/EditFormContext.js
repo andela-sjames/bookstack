@@ -7,11 +7,19 @@ class EditFormContextProvider extends Component {
     isEdit: false,
     show: 'block',
     hide: 'none',
+    id: '',
   }
-  displayEdit= () => {
-    this.setState({ isEdit: !this.state.isEdit });
+
+  displayEdit = (id) => {
+    this.setState({ 
+        isEdit: !this.state.isEdit,
+        id: id,
+     });
   }
-  render() { 
+
+
+  // useEffect should do something
+  render() {
     return (
       <EditFormContext.Provider value={{...this.state, displayEdit: this.displayEdit}}>
         {this.props.children}

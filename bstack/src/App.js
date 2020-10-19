@@ -12,13 +12,13 @@ function App() {
   return (
     <div className="App">
       <BookStackContextProvider>
-        <EditFormContextProvider>
           <Navbar />
-          <BookList />
-          <AddBook />
-          <EditBook />
+          <EditFormContextProvider>
+            <BookList />
+            <AddBook />
+            <EditBook />
+          </EditFormContextProvider>
           <Footer />
-        </EditFormContextProvider>
       </BookStackContextProvider>
     </div>
   );
