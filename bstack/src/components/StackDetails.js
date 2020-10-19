@@ -14,16 +14,6 @@ const StackDetails = ({ book }) => {
         dispatch({ type: 'REMOVE_BOOK', id: book.id });
     }
 
-    const editStack = (e) => {
-        e.preventDefault();
-        // do something interesting here!!
-        console.log("Edit Clicked!!!")
-        console.log(book)
-        // display the editForm and hide the addForm
-
-
-    }
-
     return (
         <div className="card">
             <div>
