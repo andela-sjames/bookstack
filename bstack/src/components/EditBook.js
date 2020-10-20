@@ -31,13 +31,13 @@ const EditBook = () => {
             <Form onSubmit={handleSubmit}>
                 <Form.Field>
                     <label>Title</label>
-                    <input placeholder={book.title} value={title}
-                      onChange={(e) => setTitle(e.target.value)} required />
+                    <input placeholder={book.title} name="title" value={title} required
+                      onChange={(e) => setTitle(e.target.value)} />
                 </Form.Field>
                 <Form.Field>
                     <label>Author</label>
-                    <input placeholder={book.author} value={author}
-                      onChange={(e) => setAuthor(e.target.value)} required/>
+                    <input placeholder={book.author} name="author" value={author} required
+                      onChange={(e) => setAuthor(e.target.value)} />
                 </Form.Field>
                 <Button icon labelPosition='right' type='submit' basic color='orange'>
                     Edit book
