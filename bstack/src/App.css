@@ -61,8 +61,7 @@ body, ul, li, h1, h2, a{
 }
 
 .btn-down {
-  bottom: 0; /* dummy check */
-  /* height: 50px; */
+  height: 10px;
 }
 
 
