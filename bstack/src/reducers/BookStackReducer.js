@@ -28,7 +28,7 @@ export const BookStackReducer = (state, action) => {
                 },
             }
         )
-    
+
     case 'EDIT_BOOK':
         const updateStack = {
             id: action.book.id,

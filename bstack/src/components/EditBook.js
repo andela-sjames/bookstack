@@ -19,7 +19,6 @@ const EditBook = () => {
         book  = books.objStack[id]
     }
 
-
     const handleSubmit = (e) => {
         e.preventDefault();
         dispatch({ type: 'EDIT_BOOK', book: { title, author, id }});
@@ -27,7 +26,7 @@ const EditBook = () => {
         setAuthor('');
     }
 
-    return ( 
+    return (
         <div className="add-form" style={{ display: display }}>
             <Form onSubmit={handleSubmit}>
                 <Form.Field>
