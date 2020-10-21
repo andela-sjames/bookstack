@@ -24,15 +24,15 @@ body, ul, li, h1, h2, a{
   padding: 0px 0px;
   color: black;
   bottom: 0;
-  position: absolute;
+  /* position: absolute; */
   width: 100%;
   height: 2.5rem;           /*  Footer height */
 }
 
 .grid-container {
   display: grid;
-  grid-gap: 25px;
-  grid-template-columns: repeat(4, 23%);
+  grid-gap: 42px;
+  grid-template-columns: repeat(4, 23.3%);
   margin: 10px 50px;
 }
 
@@ -64,24 +64,51 @@ body, ul, li, h1, h2, a{
   height: 10px;
 }
 
-
 .add-form {
   margin: 0px 50px;
   padding-bottom: 2.5rem;   /* Footer height */
 }
 
+/* responsive styles */
+@media screen and (max-width: 1680px){
+  .grid-container {
+    display: grid;
+    grid-gap: 25px;
+    grid-template-columns: repeat(4, 23.9%);
+    margin: 10px 50px;
+  }
 
-body.container #overlay {
-  position: fixed;
-  display: block;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #FFFFFF;
-  z-index: 2;
+  .add-form {
+    margin: 0px 50px;
+  }
+}
+
+/* responsive styles */
+@media screen and (max-width: 1560px){
+  .grid-container {
+    display: grid;
+    grid-gap: 25px;
+    grid-template-columns: repeat(4, 23.6%);
+    margin: 10px 50px;
+  }
+
+  .add-form {
+    margin: 0px 50px;
+  }
+}
+
+
+@media screen and (max-width: 1024px){
+  .grid-container {
+    display: grid;
+    grid-gap: 25px;
+    grid-template-columns: repeat(4, 23%);
+    margin: 10px 50px;
+  }
+
+  .add-form {
+    margin: 0px 50px;
+  }
 }
 
 /* responsive styles */
@@ -89,8 +116,12 @@ body.container #overlay {
   .grid-container {
     display: grid;
     grid-gap: 42px;
-    grid-template-columns: repeat(2, 45%);
+    grid-template-columns: repeat(2, 47%);
     margin: 10px 50px;
+  }
+
+  .add-form {
+    margin: 0px 50px;
   }
 }
 
@@ -101,31 +132,26 @@ body.container #overlay {
     grid-template-columns: repeat(2, 48%);
     margin: 10px 50px;
   }
+
+  .add-form {
+    margin: 0px 50px;
+  }
 }
 
 @media screen and (max-width: 560px){
   .grid-container {
     display: grid;
     grid-gap: 25px;
-    grid-template-columns: repeat(2, 50%);
-    margin: 10px 50px;
+    grid-template-columns: repeat(2, 47%);
+    margin: 10px 40px;
+  }
+
+  .add-form {
+    margin: 0px 40px;
   }
 }
 
 @media screen and (max-width: 480px){
-  .grid-container {
-    display: grid;
-    grid-gap: 25px;
-    grid-template-columns: repeat(1, 88%);
-    margin: 10px 10px;
-  }
-
-  .add-form {
-    margin: 0px 10px;
-  }
-}
-
-@media screen and (max-width: 414px){
   .grid-container {
     display: grid;
     grid-gap: 25px;
@@ -148,32 +174,6 @@ body.container #overlay {
 
   .add-form {
     margin: 0px 20px;
-  }
-}
-
-@media screen and (max-width: 315px){
-  .grid-container {
-    display: grid;
-    grid-gap: 15px;
-    grid-template-columns: repeat(2, 45%);
-    margin: 10px 10px;
-  }
-
-  .add-form {
-    margin: 0px 10px;
-  }
-}
-
-@media screen and (max-width: 300px){
-  .grid-container {
-    display: grid;
-    grid-gap: 5px;
-    grid-template-columns: repeat(1, 95%);
-    margin: 10px 5px;
-  }
-
-  .add-form {
-    margin: 0px 2px;
   }
 }
 

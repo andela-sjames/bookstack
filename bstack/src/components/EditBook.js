@@ -41,9 +41,13 @@ const EditBook = () => {
                       name="author" value={author} required
                       onChange={(e) => setAuthor(e.target.value)} />
                 </Form.Field>
-                <Button icon labelPosition='right' type='submit' basic color='orange'>
+                <Button icon labelPosition='right' floated='left' type='submit' basic color='orange'>
                     Edit book
                     <Icon name='plus circle' />
+                </Button>
+                <Button icon labelPosition='right' floated='right' type='submit' basic color='olive'>
+                    Cancel
+                    <Icon name='cancel' />
                 </Button>
             </Form>
         </div>
