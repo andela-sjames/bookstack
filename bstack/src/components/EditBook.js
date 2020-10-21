@@ -10,7 +10,7 @@ const EditBook = () => {
     const [author, setAuthor] = useState('')
 
     const { dispatch, books } = useContext(BookStackContext)
-    const { isEdit, show, hide, id } = useContext(EditFormContext)
+    const { isEdit, show, hide, id, displayEdit } = useContext(EditFormContext)
 
     const display = isEdit ? show : hide;
 
@@ -45,11 +45,11 @@ const EditBook = () => {
                     Edit book
                     <Icon name='plus circle' />
                 </Button>
-                <Button icon labelPosition='right' floated='right' type='submit' basic color='olive'>
-                    Cancel
-                    <Icon name='cancel' />
-                </Button>
             </Form>
+            <Button icon labelPosition='right' floated='right' basic color='olive' onClick={() => displayEdit(id)}>
+                Cancel
+                <Icon name='cancel' />
+            </Button>
         </div>
     );
 }
