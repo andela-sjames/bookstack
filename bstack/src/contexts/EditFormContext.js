@@ -2,6 +2,14 @@ import React, { Component, createContext } from 'react';
 
 export const EditFormContext = createContext();
 
+
+/**
+ * Represents the Edit form Context provider Component.
+ * for the EditBook file. 
+ *
+ * @class EditFormContextProvider
+ * @extends {React.Component}
+ */
 class EditFormContextProvider extends Component {
   state = {
     isEdit: false,
@@ -10,6 +18,13 @@ class EditFormContextProvider extends Component {
     id: '',
   }
 
+  /**
+   * Method used to update state when the edit form
+   * is displayed.
+   *
+   * @param {id} id of the book to edit
+   * @memberof EditFormContextProvider
+   */
   displayEdit = (id) => {
     this.setState({ 
         isEdit: !this.state.isEdit,
@@ -18,7 +33,12 @@ class EditFormContextProvider extends Component {
   }
 
 
-  // useEffect should do something
+  /**
+   * Renders EditFormContextProvider component
+   *
+   * @returns {JSX} jsx
+   * @memberof EditFormContextProvider
+   */
   render() {
     return (
       <EditFormContext.Provider value={{...this.state, displayEdit: this.displayEdit}}>

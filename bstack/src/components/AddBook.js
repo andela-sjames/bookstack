@@ -4,6 +4,11 @@ import { BookStackContext } from '../contexts/BookStackContext';
 import { EditFormContext } from '../contexts/EditFormContext';
 
 
+/**
+ * Construct a Form component for adding new books.
+ *
+ * @return {JSX} Form Component for adding a new book.
+ */
 const AddBook = () => {
     const [title, setTitle] = useState('')
     const [author, setAuthor] = useState('')
