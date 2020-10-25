@@ -3,6 +3,7 @@ import { Header, Icon, Segment } from 'semantic-ui-react'
 import { BookStackContext } from '../contexts/BookStackContext';
 import StackDetails from './StackDetails';
 
+
 /**
  * Display a segment or return a book grid
  *

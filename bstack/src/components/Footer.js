@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 /**
  * Construct a Footer semantic component.
  *

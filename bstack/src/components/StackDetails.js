@@ -3,6 +3,7 @@ import { BookStackContext } from '../contexts/BookStackContext';
 import { Button, Icon } from 'semantic-ui-react';
 import { EditFormContext } from '../contexts/EditFormContext';
 
+
 /**
  * Display details of books in card form
  *
