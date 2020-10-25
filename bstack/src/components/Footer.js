@@ -1,5 +1,10 @@
 import React from 'react';
 
+/**
+ * Construct a Footer semantic component.
+ *
+ * @return {JSX} a footer semantic.
+ */
 const Footer = () => {
     return ( 
         <footer className="foot">

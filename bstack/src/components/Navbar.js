@@ -1,7 +1,11 @@
 import React from 'react';
 import { Header } from 'semantic-ui-react'
 
-
+/**
+ * Construct a Navbar component.
+ *
+ * @return {JSX} Navar.
+ */
 const Navbar = () => {
     return ( 
     <div className="navbar">

@@ -3,9 +3,12 @@ import { Button, Icon, Form } from 'semantic-ui-react'
 import { BookStackContext } from '../contexts/BookStackContext';
 import { EditFormContext } from '../contexts/EditFormContext';
 
-
+/**
+ * Construct a Form component for editing an existing.
+ *
+ * @return {JSX} Form Component for editing a book.
+ */
 const EditBook = () => {
-
     const [title, setTitle] = useState('')
     const [author, setAuthor] = useState('')
 
