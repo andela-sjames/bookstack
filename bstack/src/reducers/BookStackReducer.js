@@ -1,5 +1,12 @@
 import uuid from 'uuid/v4';
 
+
+/**
+ * Reducer for  Book actions
+ * @param {object} [state]
+ * @param {object} action
+ * @returns {array} new state of the Book object
+ */
 export const BookStackReducer = (state, action) => {
   switch (action.type) {
     case 'ADD_BOOK':
