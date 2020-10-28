@@ -4,6 +4,6 @@ import App from './App';
 
 test('renders a Segment placeholder when booklist is empty', () => {
   const { getByText } = render(<App />);
-  const headerElement = getByText(/"You don't have any book to read at the moment."/h);
+  const headerElement = getByText("You don't have any book to read at the moment.");
   expect(headerElement).toBeInTheDocument();
 });
