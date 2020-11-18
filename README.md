@@ -1,6 +1,6 @@
 # Bookstack
 
-A simple PWA to demonstrate a CRUD operation for creating book using React Hooks &amp; Context.
+A simple PWA to demonstrate a CRUD operation for creating books using React Hooks &amp; Context.
 
 Run the command below to start application locally.
 
