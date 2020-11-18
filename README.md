@@ -12,10 +12,13 @@ Sample pix of what app looks like.
 
 ## Sample pix of what app looks like
 
+Default view
 ![bookstack-default-page](pix/default.png)
 
+List & add a new book
 ![bookstack-list-page](pix/edit_books.png)
 
+Edit an existing book
 ![bookstack-edit-page](pix/list_books.png)
 
 
