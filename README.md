@@ -1,15 +1,23 @@
-# bookstack
-A simple PWA to demonstrate a crud operation for creating book using React Hooks &amp; Context. 
+# Bookstack
+
+A simple PWA to demonstrate a CRUD operation for creating book using React Hooks &amp; Context.
+
+Run the command below to start application locally.
+
+```shell
+yarn start
+```
+
+Sample pix of what app looks like.
+
+## Sample pix of what app looks like
+
+![bookstack-default-page](pix/default.png)
+
+![bookstack-list-page](pix/edit_books.png)
+
+![bookstack-edit-page](pix/list_books.png)
 
 
-Some Reference: 
-
-https://www.freecodecamp.org/news/how-to-keep-your-footer-where-it-belongs-59c6aa05c59c/
-
-https://dev.to/andyrewlee/cheat-sheet-for-updating-objects-and-arrays-in-react-state-48np
-
-https://read.reduxbook.com/markdown/part1/03-updating-state.html
-
-https://blog.bitsrc.io/using-service-workers-with-react-27a4c5e2d1a9
-
-https://webpack.js.org/guides/progressive-web-application/
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[README REFERENCE](bstack/README.md)
