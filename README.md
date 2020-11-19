@@ -21,6 +21,5 @@ List & add a new book
 Edit an existing book
 ![bookstack-edit-page](pix/list_books.png)
 
-
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 [README REFERENCE](bstack/README.md)
